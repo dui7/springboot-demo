@@ -1,0 +1,9 @@
+# Tomcat
+server:
+  port: 8081
+
+netty:
+  socket:
+    port: 33440
+  websocket:
+    port: 33441

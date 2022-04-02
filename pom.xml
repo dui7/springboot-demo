@@ -11,6 +11,7 @@
     <modules>
         <module>springboot</module>
         <module>springboot-netty-websocket</module>
+        <module>netty-socket-websocket</module>
     </modules>
 
     <properties>
@@ -20,6 +21,7 @@
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <java.version>1.8</java.version>
         <junit.version>4.12</junit.version>
+        <lombok.version>1.18.4</lombok.version>
         <fastjson.version>1.2.78</fastjson.version>
         <commons.lang.version>3.7</commons.lang.version>
         <hutool.version>5.1.2</hutool.version>
@@ -40,6 +42,11 @@
                 <groupId>mysql</groupId>
                 <artifactId>mysql-connector-java</artifactId>
                 <version>${mysql.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.projectlombok</groupId>
+                <artifactId>lombok</artifactId>
+                <version>${lombok.version}</version>
             </dependency>
             <dependency>
                 <groupId>com.alibaba</groupId>
