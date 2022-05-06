@@ -12,6 +12,10 @@
         <module>springboot</module>
         <module>springboot-netty-websocket</module>
         <module>netty-socket-websocket</module>
+        <module>ffmpeg</module>
+        <module>hikvisionds-nvr</module>
+        <module>base</module>
+        <module>springboot-actuator</module>
     </modules>
 
     <properties>
@@ -27,6 +31,11 @@
         <hutool.version>5.1.2</hutool.version>
         <mysql.version>5.1.34</mysql.version>
         <netty.version>4.1.36.Final</netty.version>
+        <javacpp.version>1.5.2</javacpp.version>
+        <opencv.version>3.4.3</opencv.version>
+        <ffmpeg.version>4.0.2</ffmpeg.version>
+        <swagger.version>2.9.2</swagger.version>
+        <knife4j.version>2.0.2</knife4j.version>
     </properties>
 
     <parent>
@@ -69,6 +78,38 @@
                 <artifactId>hutool-all</artifactId>
                 <version>${hutool.version}</version>
             </dependency>
+            <dependency>
+                <groupId>io.springfox</groupId>
+                <artifactId>springfox-swagger2</artifactId>
+                <version>${swagger.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>io.springfox</groupId>
+                <artifactId>springfox-swagger-ui</artifactId>
+                <version>${swagger.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.github.xiaoymin</groupId>
+                <artifactId>knife4j-spring-boot-starter</artifactId>
+                <version>${knife4j.version}</version>
+            </dependency>
+            <!-- javacpp -->
+<!--            <dependency>-->
+<!--                <groupId>org.bytedeco</groupId>-->
+<!--                <artifactId>javacpp</artifactId>-->
+<!--                <version>${javacpp.version}</version>-->
+<!--            </dependency>-->
+<!--            &lt;!&ndash; ffmpeg &ndash;&gt;-->
+<!--            <dependency>-->
+<!--                <groupId>org.bytedeco.javacpp-presets</groupId>-->
+<!--                <artifactId>ffmpeg-platform</artifactId>-->
+<!--                <version>${ffmpeg.version}-${javacpp.version}</version>-->
+<!--            </dependency>-->
+<!--            <dependency>-->
+<!--                <groupId>org.bytedeco.javacpp-presets</groupId>-->
+<!--                <artifactId>ffmpeg</artifactId>-->
+<!--                <version>${ffmpeg.version}-${javacpp.version}</version>-->
+<!--            </dependency>-->
             <dependency>
                 <groupId>io.netty</groupId>
                 <artifactId>netty-all</artifactId>
