@@ -1,0 +1,8 @@
+# Tomcat
+server:
+  port: 8081
+
+spring:
+  profiles:
+    # 环境 local|dev|test|prod
+    active: local
