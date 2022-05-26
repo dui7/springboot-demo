@@ -16,6 +16,7 @@
         <module>hikvisionds-nvr</module>
         <module>base</module>
         <module>springboot-actuator</module>
+        <module>springboot-redis</module>
     </modules>
 
     <properties>
