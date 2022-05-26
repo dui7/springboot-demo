@@ -18,6 +18,7 @@
         <module>springboot-actuator</module>
         <module>springboot-redis</module>
         <module>springboot-admin</module>
+        <module>springboot-thymeleaf</module>
     </modules>
 
     <properties>
