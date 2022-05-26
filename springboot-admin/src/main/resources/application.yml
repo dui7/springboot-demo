@@ -1,0 +1,24 @@
+# Tomcat
+server:
+  port: 8081
+
+spring:
+  profiles:
+    # 环境 local|dev|test|prod
+    active: local
+  boot:
+    admin:
+      client:
+        url: http://localhost:8081
+
+management:
+  server:
+    port: 9001
+  endpoints:
+    web:
+      base-path: /fentiaozi  #actuator的访问路径
+      exposure:
+        include: "*"  # “*”号代表启用所有的监控端点，可以单独启用，例如，`health`，`info`，`metrics`等
+logging:
+  file:
+    name: ./logs/admin.log

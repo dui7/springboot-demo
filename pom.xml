@@ -17,6 +17,7 @@
         <module>base</module>
         <module>springboot-actuator</module>
         <module>springboot-redis</module>
+        <module>springboot-admin</module>
     </modules>
 
     <properties>
@@ -37,6 +38,9 @@
         <ffmpeg.version>4.0.2</ffmpeg.version>
         <swagger.version>2.9.2</swagger.version>
         <knife4j.version>2.0.2</knife4j.version>
+        <admin.starter.server.version>2.3.1</admin.starter.server.version>
+        <spring.boot.admin.client.version>2.3.1</spring.boot.admin.client.version>
+
     </properties>
 
     <parent>
@@ -116,6 +120,18 @@
                 <artifactId>netty-all</artifactId>
                 <!--                <scope>compile</scope>-->
                 <version>${netty.version}</version>
+            </dependency>
+            <!-- admin服务端  -->
+            <dependency>
+                <groupId>de.codecentric</groupId>
+                <artifactId>spring-boot-admin-starter-server</artifactId>
+                <version>${admin.starter.server.version}</version>
+            </dependency>
+            <!-- admin客户端  -->
+            <dependency>
+                <groupId>de.codecentric</groupId>
+                <artifactId>spring-boot-admin-starter-client</artifactId>
+                <version>${spring.boot.admin.client.version}</version>
             </dependency>
         </dependencies>
     </dependencyManagement>
