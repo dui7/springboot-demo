@@ -21,6 +21,7 @@
         <module>springboot-thymeleaf</module>
         <module>springboot-redisson</module>
         <module>springboot-log4j2</module>
+        <module>springboot-mybatis</module>
     </modules>
 
     <properties>
@@ -44,6 +45,7 @@
         <admin.starter.server.version>2.3.1</admin.starter.server.version>
         <spring.boot.admin.client.version>2.3.1</spring.boot.admin.client.version>
         <redisson.version>3.9.0</redisson.version>
+        <mybatis.version>2.1.4</mybatis.version>
     </properties>
 
     <parent>
@@ -55,6 +57,11 @@
 
     <dependencyManagement>
         <dependencies>
+            <dependency>
+                <groupId>org.mybatis.spring.boot</groupId>
+                <artifactId>mybatis-spring-boot-starter</artifactId>
+                <version>${mybatis.version}</version>
+            </dependency>
             <dependency>
                 <groupId>mysql</groupId>
                 <artifactId>mysql-connector-java</artifactId>

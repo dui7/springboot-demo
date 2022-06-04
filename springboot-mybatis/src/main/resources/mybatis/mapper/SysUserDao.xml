@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.fentiaozi.dao.SysUserDao">
+    <insert id="save" useGeneratedKeys="true" keyProperty="id">
+        INSERT INTO `demo`.`sys_user`(`user_name`, `password`, `real_name`, `gender`, `creator`, `create_date`)
+        VALUES ( #{userName}
+               , #{password}
+               , #{realName}
+               , #{gender}
+               , #{creator}
+               , #{createDate})
+    </insert>
+
+    <delete id="delete">
+        delete
+        from sys_user
+        where id = #{id}
+    </delete>
+
+    <update id="update">
+        update sys_user
+        <set>
+            <if test="userName != null">`user_name` = #{userName},</if>
+            <if test="password != null">`password` = #{password},</if>
+            <if test="realName != null">`real_name` = #{realName},</if>
+            <if test="gender != null">`gender` = #{gender},</if>
+            <if test="gender != null">`updater` = #{updater},</if>
+            <if test="gender != null">`update_date` = #{updateDate}</if>
+        </set>
+        where id = #{id}
+    </update>
+
+    <select id="get" resultType="com.fentiaozi.entity.SysUserEntity">
+        select sys_user.id,
+               sys_user.user_name,
+               sys_user.`password`,
+               sys_user.real_name,
+               sys_user.gender,
+               sys_user.creator,
+               sys_user.create_date,
+               sys_user.updater,
+               sys_user.update_date
+        from sys_user
+        where id = #{id}
+    </select>
+
+    <select id="selectList" resultType="com.fentiaozi.entity.SysUserEntity">
+        select sys_user.id,
+        sys_user.user_name,
+        sys_user.`password`,
+        sys_user.real_name,
+        sys_user.gender,
+        sys_user.creator,
+        sys_user.create_date,
+        sys_user.updater,
+        sys_user.update_date
+        from sys_user
+        where 1=1
+        <if test="id != null ">and id = #{id}</if>
+        <if test="userName != null  and userName != '' ">and user_name = #{userName}</if>
+        <if test="realName != null  and realName != '' ">and real_name = #{realName}</if>
+        <if test="gender != null">and `gender` = #{gender}</if>
+        order by create_date
+    </select>
+</mapper>
