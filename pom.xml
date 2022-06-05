@@ -22,6 +22,7 @@
         <module>springboot-redisson</module>
         <module>springboot-log4j2</module>
         <module>springboot-mybatis</module>
+        <module>springboot-mqtt-activemq-apollo</module>
     </modules>
 
     <properties>
