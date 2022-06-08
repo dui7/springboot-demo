@@ -1,0 +1,11 @@
+# Tomcat
+server:
+  port: 8081
+
+#单点登录配置
+cas:
+  server-url-prefix: http://127.0.0.1:8080/cas
+  server-login-url: http://127.0.0.1:8080/cas/login
+  client-host-url: http://127.0.0.1:8081
+  use-session: true
+  validation-type: cas3
