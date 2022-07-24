@@ -12,9 +12,7 @@
         <module>springboot</module>
         <module>springboot-netty-websocket</module>
         <module>netty-socket-websocket</module>
-        <module>ffmpeg</module>
         <module>hikvisionds-nvr</module>
-        <module>base</module>
         <module>springboot-actuator</module>
         <module>springboot-redis</module>
         <module>springboot-admin</module>
